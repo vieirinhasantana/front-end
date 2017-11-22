@@ -67,12 +67,16 @@
   </div>
 </template>
 <script>
+import { isLoggedIn } from '../utils/auth'
 import SideBar from './SideBar'
 import NavBar from './NavBar'
 export default {
   components: {
     sidebar: SideBar,
     navbar: NavBar
+  },
+  created: function () {
+    return isLoggedIn()
   }
 }
 </script>

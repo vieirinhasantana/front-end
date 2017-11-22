@@ -59,6 +59,10 @@
     <div id="app-wrapper">
       <sidebar></sidebar>
       <navbar></navbar>
+      <div id="dashboard-container">
+        <section class="main-content">
+        </section>
+      </div>
     </div>
   </div>
 </template>

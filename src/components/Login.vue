@@ -37,6 +37,7 @@
     </div>
 </template>
 <script>
+import { sign } from '../utils/api.js'
 export default {
   data: function () {
     return {
@@ -49,7 +50,14 @@ export default {
       if ((!this.email) || (!this.password)) {
         this.$swal({icon: 'warning', title: 'Atenção', text: 'Você não preencheu todos os campos. Verifique e tente novamente!', type: 'warning', confirm: true})
       } else {
-        console.log('aaaaa')
+        sign(this.email, this.password).then(result => {
+          console.log(result)
+        })
+        .catch(error => {
+          if (error) {
+            this.$swal({icon: 'error', title: 'Credências Inválidas', text: 'Usuário e/ou Senha inválido(s) para acesso. Verifique e tente novamente.', type: 'error', confirm: true})
+          }
+        })
       }
     }
   }

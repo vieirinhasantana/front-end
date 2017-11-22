@@ -25,7 +25,7 @@ aside.main-sidebar {
     left: 0;
     width: calc(100vw - 98px);
     height: 230px;
-    background: #663798;
+    background: #2196f3;
     content: "";
     opacity: 1;
     transition: .3s;

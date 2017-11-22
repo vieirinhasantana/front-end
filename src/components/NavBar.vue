@@ -10,66 +10,16 @@
     </div>
     <ul class="breadcrumbs">
         <li class=""><a>Dashboard</a></li>
-        <li>
-            <div class="ddown">
-                <div class="ddown__init ddown__init--white">
-                    <a>
-                        Vue Dashboard
-                    </a>
-                </div>
-                <div class="ddown__content">
-                    <ul class="ddown__menu">
-                        <li class="ddown__header"><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-account-add"></i><span>Add New Client</span></a></li>
-                        <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-file-plus"></i><span>Create Invoice</span></a></li>
-                        <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-email"></i><span>Send Email</span></a></li>
-                        <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-ticket-star"></i><span>Open New Ticket</span></a></li>
-                        <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-accounts-list"></i><span>Add Contact</span></a></li>
-                        <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-money-box"></i><span>Add Founds</span></a></li>
-                        <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-square-right"></i><span>Login As Client</span></a></li>
-                        <li class="ddown__footer">
-                            <a><span>More</span></a>
-                            <ul class="ddown__submenu">
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-account-add"></i><span>Add New Client</span></a></li>
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-money-box"></i><span>Add Founds</span></a></li>
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-money-box"></i><span>Add Founds</span></a></li>
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-ticket-star"></i><span>Open New Ticket</span></a></li>
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-money-box"></i><span>Add Founds</span></a></li>
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-money-box"></i><span>Add Founds</span></a></li>
-                                <li><a class="mdl-js-button mdl-js-ripple-effect"><i class="zmdi zmdi-ticket-star"></i><span>Open New Ticket</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-        </li>
     </ul>
-    <div class="search-box mr16">
-        <i class="zmdi zmdi-search"></i>
-        <input type="hidden" name="_protection" value="" class="search-protection">
-        <form action="">
-            <div class="search-box__mdl-textfiel mdl-textfield mdl-textfield--AR mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input search-box__search-field" type="text" name="main-search" id="main-search">
-                <label class="mdl-textfield__label" for="main-search">Quick Search</label>
-            </div>
-        </form>
-        <i class="search-box__close zmdi zmdi-close mr16"></i>
-    </div>
     <div class="item-grp item-grp--40">
         <div class="client-area">
-            <div class="item-grp-single" data-tooltip-inline="Widget Edit Toggle">
-                <div class="mdl-js-button mdl-js-ripple-effect widget-edit" id="widgets-edit">
-                    <i class="icon--widgets-edit"></i>
-                </div>
-            </div>
-            <div class="item-grp-single" data-tooltip-inline="Notifications" data-tooltip-my-position="top left" data-tooltip-target-position="bottom right">
+            <div class="item-grp-single" data-tooltip-inline="Notificações" data-tooltip-my-position="top left" data-tooltip-target-position="bottom right">
                 <span class="badge badge--top-right badge--md badge--green">5</span>
                 <div class="mdl-js-button mdl-js-ripple-effect" id="main-notifications">
-                    <div class="main-head__alerts"><i class="icon--alert"></i></div>
+                    <div class="main-head__alerts"><i class="zmdi zmdi-notifications-active"></i></div>
                 </div>
             </div>
-            <div class="item-grp-single" data-tooltip-inline="Alerts">
+            <div class="item-grp-single" data-tooltip-inline="Alertas">
                 <span class="badge badge--top-right badge--md badge--green">9</span>
                 <div class="mdl-js-button mdl-js-ripple-effect" id="main-alerts">
                     <div class="main-head__settings"><i class="zmdi zmdi-alert-triangle"></i></div>
@@ -79,7 +29,7 @@
                 <div class="ddown ddown--user">
                     <div class="ddown__init ddown__init--clean mdl-js-button mdl-js-ripple-effect">
                         <div class="avatar avatar--xs">
-                            <img src="img/avatars/avatar_sample_4.png" alt="Avatar">
+                            <img src="https://marketplace.canva.com/MAB6v7RGMOw/1/thumbnail/canva-robot-electric-avatar-icon-MAB6v7RGMOw.png" alt="Avatar">
                         </div>
                     </div>
                     <div class="ddown__content">
@@ -88,28 +38,28 @@
                                 <a class="mdl-js-button mdl-js-ripple-effect">
                                     <div class="flex-block">
                                         <div class="avatar avatar--lg">
-                                            <img src="img/brand/brand-rsstudio--lg.png" alt="RS Studio">
+                                            <img src="img/brand/brand-rsstudio--lg.png" alt="Cifra">
                                         </div>
                                         <div class="flex-block__content">
-                                            <span class="flex-block__title">Paweł Bis</span>
-                                            <span class="flex-block__desc">paul@rsstudio.net</span>
+                                            <span class="flex-block__title">Daniel Vieira</span>
+                                            <span class="flex-block__desc">daniel.vieira@cifra.io</span>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a class="mdl-js-button mdl-js-ripple-effect">
-                                    <i class="zmdi zmdi-file-plus"></i> View Profile
+                                    <i class="zmdi zmdi-file-plus"></i> Ver Perfil
                                 </a>
                             </li>
                             <li>
                                 <a class="mdl-js-button mdl-js-ripple-effect">
-                                    <i class="zmdi zmdi-email"></i> Something Else
+                                    <i class="zmdi zmdi-email"></i> E-mail
                                 </a>
                             </li>
                             <li class="ddown__footer">
                                 <a class="mdl-js-button mdl-js-ripple-effect">
-                                    <i class="zmdi zmdi-sign-in"></i> Sign Out
+                                    <i class="zmdi zmdi-sign-in"></i> Sair
                                 </a>
                             </li>
                         </ul>
@@ -118,46 +68,6 @@
             </div>
         </div>
     </div>
-
-    <div class="ddown ddown--brand">
-        <div class="ddown__init ddown__init--white btn btn--md btn--brand mdl-js-button mdl-js-ripple-effect">RS Studio</div>
-        <div class="ddown__content">
-            <ul class="ddown__menu">
-                <li class="ddown__header"><span>Change Brand</span></li>
-                <li>
-                    <a class="mdl-js-button mdl-js-ripple-effect">
-                        <div class="flex-block">
-                            <div class="avatar avatar--xs">
-                                <img src="img/brand/brand-rsstudio.png" alt="Avatar">
-                            </div>
-                            <div class="flex-block__content">
-                                <span class="flex-block__title">RS Studio</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="is-selected">
-                    <a class="mdl-js-button mdl-js-ripple-effect">
-                        <div class="flex-block">
-                            <div class="avatar avatar--xs">
-                                <img src="img/brand/brand-inbs.png" alt="Avatar">
-                            </div>
-                            <div class="flex-block__content">
-                                <span class="flex-block__title">INBS.software</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="ddown__footer">
-                    <a class="mdl-js-button mdl-js-ripple-effect" href="brand_settings.html">
-                        <i class="zmdi zmdi-settings"></i> Manage Brands
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
 </section>
-
     </div>
 </template>

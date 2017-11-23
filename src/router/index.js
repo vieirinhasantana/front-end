@@ -13,6 +13,11 @@ export default new Router({
       component: Dashboard
     },
     {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
+    },
+    {
       path: '/sign-in',
       name: 'Login',
       component: Login

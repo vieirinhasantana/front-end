@@ -51,7 +51,9 @@ export default {
         this.$swal({icon: 'warning', title: 'Atenção', text: 'Você não preencheu todos os campos. Verifique e tente novamente!', type: 'warning', confirm: true})
       } else {
         sign(this.email, this.password).then(result => {
-          console.log(result)
+          this.$cookies.set('email', this.email)
+          this.$cookies.set('token', result.data.Token)
+          this.$router.push('dashboard')
         })
         .catch(error => {
           if (error) {

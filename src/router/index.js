@@ -9,8 +9,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Dashboard',
-      component: Dashboard
+      redirect: '/dashboard'
     },
     {
       path: '/dashboard',

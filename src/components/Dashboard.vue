@@ -77,7 +77,7 @@ export default {
   },
   created: function () {
     if (!isLoggedIn()) {
-      this.$router.push({
+      this.$router.replace({
         path: '/sign-in'
       })
     }

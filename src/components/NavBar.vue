@@ -41,8 +41,8 @@
                                             <img src="img/brand/brand-rsstudio--lg.png" alt="Cifra">
                                         </div>
                                         <div class="flex-block__content">
-                                            <span class="flex-block__title">Daniel Vieira</span>
-                                            <span class="flex-block__desc">daniel.vieira@cifra.io</span>
+                                            <span class="flex-block__title">{nome usuário}</span>
+                                            <span class="flex-block__desc">{email usuário}}</span>
                                         </div>
                                     </div>
                                 </a>
@@ -58,7 +58,7 @@
                                 </a>
                             </li>
                             <li class="ddown__footer">
-                                <a class="mdl-js-button mdl-js-ripple-effect">
+                                <a @click="logout" class="mdl-js-button mdl-js-ripple-effect">
                                     <i class="zmdi zmdi-sign-in"></i> Sair
                                 </a>
                             </li>
@@ -71,3 +71,15 @@
 </section>
     </div>
 </template>
+<script>
+import { logout } from '../utils/authentication'
+export default {
+  methods: {
+    logout: function () {
+      if (logout()) {
+        this.$router.push('sign-in')
+      }
+    }
+  }
+}
+</script>

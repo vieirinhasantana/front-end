@@ -10700,7 +10700,7 @@ span.ellipse.clickable {
     top: 0
 }
 .app-content.page-login .login-box .input-field .mdl-textfield__input {
-    color: #02a8f3;
+    color: #595d5f;
     letter-spacing: .4px
 }
 .app-content.page-login .login-box .input-field .mdl-textfield__label:after {
@@ -16383,7 +16383,6 @@ aside.main-sidebar {
 }
 @media only screen and (min-width: 768px) {
     aside.main-sidebar {
-        position: fixed;
         top: 0;
         left: 0;
         min-width: 98px;
@@ -18761,7 +18760,7 @@ aside.main-sidebar ul.main-menu.main-menu--brand li:first-child.submenu-open > a
     }
 }
 .main-menu-html nav {
-    opacity: 0
+    /*opacity: 0*/
 }
 @media only screen and (min-width: 1024px) {
     #app-wrapper.main-sidebar--expanded.main-sidebar--wide .more-trigger {

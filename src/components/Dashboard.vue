@@ -76,7 +76,11 @@ export default {
     navbar: NavBar
   },
   created: function () {
-    return isLoggedIn()
+    if (!isLoggedIn()) {
+      this.$router.push({
+        path: '/sign-in'
+      })
+    }
   }
 }
 </script>

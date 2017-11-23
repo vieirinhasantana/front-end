@@ -5,7 +5,7 @@ var router = new Router({})
 
 export function isLoggedIn () {
   if (!cookies.isKey('token') || !cookies.isKey('email')) {
-    return router.push('sign-in')
+    return false
   }
 }
 

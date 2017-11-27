@@ -37,12 +37,9 @@
                             <li class="ddown__header">
                                 <a class="mdl-js-button mdl-js-ripple-effect">
                                     <div class="flex-block">
-                                        <div class="avatar avatar--lg">
-                                            <img src="img/brand/brand-rsstudio--lg.png" alt="Cifra">
-                                        </div>
                                         <div class="flex-block__content">
                                             <span class="flex-block__title">{nome usuário}</span>
-                                            <span class="flex-block__desc">{email usuário}}</span>
+                                            <span class="flex-block__desc">{email usuário}</span>
                                         </div>
                                     </div>
                                 </a>

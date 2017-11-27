@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import VueCookies from 'vue-cookies'
 import VueSweetAlert from 'vue-sweetalert'
+import Vuetify from 'vuetify'
 
 Vue.use(VueCookies)
 Vue.use(VueSweetAlert)
+Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 

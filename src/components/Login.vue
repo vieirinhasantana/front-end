@@ -20,16 +20,16 @@
           </div>
           <footer>
             <v-flex xs12 sm1 md3 offset-md1>
-              <h4 class="title_UniBank_alert">Warning!</h4>
-              <p class="text_UniBank">UniBank não exige a instalação de nenhum software adicional.<br>Seja aconselhável proteger de malware fingindo Trusteer Rapport.</p>
+              <h4 class="title_UniBank_alert">Atenção!</h4>
+              <p class="text_UniBank">UniBank não exige a instalação de nenhum software adicional.<br>É aconselhável proteger de malware fingindo Trusteer Rapport.</p>
             </v-flex>
           </footer>
         </v-flex>
         <v-flex xs12 sm5 md8>
           <div class="right_sign_in">
             <div class="text_welcome">
-              <p class="text_big">Welcome to <b>UniBank</b></p>
-              <p class="text_small"> Login in to access your account.</p>
+              <p class="text_big">Bem-vindo ao <b>UniBank</b></p>
+              <p class="text_small">Entre para acessar sua conta.</p>
             </div>
             <div class="finally">
               <p><div>© {{ new Date().getFullYear() }} - Todos os direitos reservados.</div></p>

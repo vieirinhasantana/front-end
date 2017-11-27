@@ -8,15 +8,32 @@
               <img src="/static/img/logo.png" alt="" />
             </div>
           </v-flex>
-          <v-flex xs8 offset-xs0 offset-md1 offset-lg2>
-            <v-form v-model="valid">
-              <v-text-field label="Email ID" v-model="email" :rules="emailRules"required></v-text-field>
-              <v-text-field label="Senha" v-model="password" :rules="passwordRules" required></v-text-field>
-            </v-form>
-          </v-flex>
+          <div class="left_sign_in">
+            <v-flex xs8 offset-xs0 offset-md1 offset-lg2>
+              <v-form v-model="valid">
+                <v-text-field label="Email ID" type="email" v-model="email" :rules="emailRules"required></v-text-field>
+                <v-text-field label="Senha" type="password" v-model="password" :rules="passwordRules" required></v-text-field>
+                <router-link to="forgot" >Esqueceu sua senha?</router-link>
+                <v-btn class="login_btn">Acessar</v-btn>
+              </v-form>
+            </v-flex>
+          </div>
+          <footer>
+            <v-flex xs12 sm1 md3 offset-md1>
+              <h4 class="title_UniBank_alert">Warning!</h4>
+              <p class="text_UniBank">UniBank não exige a instalação de nenhum software adicional.<br>Seja aconselhável proteger de malware fingindo Trusteer Rapport.</p>
+            </v-flex>
+          </footer>
         </v-flex>
         <v-flex xs12 sm5 md8>
           <div class="right_sign_in">
+            <div class="text_welcome">
+              <p class="text_big">Welcome to <b>UniBank</b></p>
+              <p class="text_small"> Login in to access your account.</p>
+            </div>
+            <div class="finally">
+              <p><div>© {{ new Date().getFullYear() }} - Todos os direitos reservados.</div></p>
+            </div>
           </div>
         </v-flex>
       </v-layout>
@@ -30,15 +47,22 @@
         valid: false,
         email: '',
         emailRules: [
-          (v) => !!v || 'Email ID não informado',
-          (v) => v.length <= 10 || 'Name must be less than 10 characters'
+          (v) => !!v || 'Email ID não informado'
         ],
         password: '',
         passwordRules: [
-          (v) => !!v || 'Senha não informada.',
-          (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+          (v) => !!v || 'Senha não informada.'
         ]
       }
     }
   }
 </script>
+<style>
+html, body{
+  overflow: -webkit-paged-y;
+}
+
+.primary--text , .theme--light .input-group input{
+    color: #922c8a !important;
+}
+</style>

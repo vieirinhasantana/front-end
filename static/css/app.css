@@ -2,7 +2,28 @@ html, body {
     margin:0; 
     padding:0; 
     height:100%; 
+    font-family: 'Roboto', sans-serif;
+    background: #fff !important;
+    color: #fff !important;
   }
+
+a{
+    color: #9f9da3 !important;
+    text-decoration: none;
+}
+
+.primary--text{
+    color: #922c8a !important;
+}
+
+.login_btn{
+    background: #392c70 !important;
+    color: #fff !important;
+    border-radius: 30px;
+    font-size: 12px;
+    float: right;
+    font-weight: 100;
+}
 
 .container{
     padding: 0px !important;
@@ -13,8 +34,9 @@ html, body {
 }
 
 .left_sign_in{
-
+    margin-top: 250px;
 }
+
 
 .right_sign_in{
     margin: 0px 0px 0px 0px;
@@ -28,4 +50,48 @@ html, body {
     background: -ms-linear-gradient(45deg, rgba(28,20,74,1) 0%, rgba(56,44,111,1) 100%); /* ie10+ */
     background: linear-gradient(45deg, rgba(28,20,74,1) 0%, rgba(56,44,111,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#382c6f', endColorstr='#1c144a',GradientType=1 ); /* ie6-9 */
+    color: #fff !important;
+}
+
+footer{
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    left:-100px;
+}
+
+.title_UniBank_alert{
+    color: #392c70 !important;
+}
+
+.text_UniBank{
+    color: #9f9da3 !important;
+}
+
+.right_sign_in > .text_welcome {
+    margin-top: 335px;
+    margin-left: 50px;
+    font-weight: 100;
+}
+
+.right_sign_in > .text_welcome > .text_big{
+    margin-bottom: 0px !important;
+    font-size: 70px;   
+}
+
+.right_sign_in > .text_welcome > .text_big > b{
+    font-weight: 800;  
+}
+
+.right_sign_in > .text_welcome > .text_small{
+    font-size: 30px;
+}
+
+.right_sign_in > .finally{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    margin-left: -50px;
 }

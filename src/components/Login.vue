@@ -29,7 +29,7 @@
           <div class="right_sign_in">
             <div class="text_welcome">
               <p class="text_big">Bem-vindo ao <b>UniBank</b></p>
-              <p class="text_small">Somos mais que um banco, somos a revolução.</p>
+              <p class="text_small">Somos mais que um banco, somos o futuro.</p>
             </div>
             <div class="finally">
               <p><div>© {{ new Date().getFullYear() }} - Todos os direitos reservados.</div></p>
@@ -73,6 +73,14 @@ export default {
         this.dialog = true
       } else {
         LoggedIn(this.email, this.password)
+        .then(result => {
+          console.log(result)
+        })
+        .catch(err => {
+          if (err) {
+            this.dialog = true
+          }
+        })
       }
     }
   }

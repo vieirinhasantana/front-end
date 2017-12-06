@@ -13,11 +13,11 @@ export function LoggedIn (email, password) {
   return new Promise((resolve, reject) => {
     sign(email, password)
     .then(result => {
-      console.log(result)
+      resolve(resolve)
     })
     .catch(err => {
       if (err) {
-        console.log(err)
+        reject(err)
       }
     })
   })

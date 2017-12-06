@@ -10,11 +10,11 @@
           </v-flex>
           <div class="left_sign_in">
             <v-flex xs8 offset-xs0 offset-md1 offset-lg2>
-              <v-form v-model="valid">
+              <v-form v-model="valid" v-on:submit.prevent="onSubmit">
                 <v-text-field label="Email ID" type="email" v-model="email" :rules="emailRules"required></v-text-field>
                 <v-text-field label="Senha" type="password" v-model="password" :rules="passwordRules" required></v-text-field>
                 <router-link to="forgot" >Esqueceu sua senha?</router-link>
-                <v-btn class="login_btn">Acessar</v-btn>
+                <v-btn type="submit" class="login_btn">Acessar</v-btn>
               </v-form>
             </v-flex>
           </div>
@@ -29,7 +29,7 @@
           <div class="right_sign_in">
             <div class="text_welcome">
               <p class="text_big">Bem-vindo ao <b>UniBank</b></p>
-              <p class="text_small">Entre para acessar sua conta.</p>
+              <p class="text_small">Somos mais que um banco, somos a revolução.</p>
             </div>
             <div class="finally">
               <p><div>© {{ new Date().getFullYear() }} - Todos os direitos reservados.</div></p>
@@ -38,24 +38,45 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-dialog v-model="dialog" width="500px">
+      <v-card>
+        <v-card-title class="headline">Oops! Algo errado aconteceu ;(</v-card-title>
+        <v-card-text>Sua credêncial parace está incorreta. Verifique-a e tente efetuar login novamente. Caso não consega efetuar login entre em contato com o suporte.</v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn flat="flat" class="login_btn" @click.native="dialog = false">Ok</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 <script>
-  export default {
-    data () {
-      return {
-        valid: false,
-        email: '',
-        emailRules: [
-          (v) => !!v || 'Email ID não informado'
-        ],
-        password: '',
-        passwordRules: [
-          (v) => !!v || 'Senha não informada.'
-        ]
+import { LoggedIn } from '../utils/authentication.js'
+export default {
+  data () {
+    return {
+      dialog: false,
+      valid: false,
+      email: '',
+      emailRules: [
+        (v) => !!v || 'Email ID não informado'
+      ],
+      password: '',
+      passwordRules: [
+        (v) => !!v || 'Senha não informada.'
+      ]
+    }
+  },
+  methods: {
+    onSubmit () {
+      if ((this.email === '') || (this.password === '')) {
+        this.dialog = true
+      } else {
+        LoggedIn(this.email, this.password)
       }
     }
   }
+}
 </script>
 <style>
 html, body{

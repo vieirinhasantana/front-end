@@ -2,7 +2,7 @@ import cookies from 'vue-cookies'
 import { sign } from './api.js'
 
 export function isLoggedIn () {
-  if (!cookies.isKey('token') || !cookies.isKey('email')) {
+  if (!cookies.isKey('UniBank-Token') || !cookies.isKey('UniBank-loggedIn')) {
     return false
   } else {
     return true
@@ -13,7 +13,7 @@ export function LoggedIn (email, password) {
   return new Promise((resolve, reject) => {
     sign(email, password)
     .then(result => {
-      resolve(resolve)
+      resolve(result)
     })
     .catch(err => {
       if (err) {

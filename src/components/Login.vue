@@ -74,7 +74,9 @@ export default {
       } else {
         LoggedIn(this.email, this.password)
         .then(result => {
-          console.log(result)
+          this.$cookies.set('UniBank-loggedIn', this.email)
+          this.$cookies.set('UniBank-Token', result.data.body.token)
+          this.$router.push('dashboard')
         })
         .catch(err => {
           if (err) {

@@ -14,7 +14,7 @@
                 <v-text-field label="Email ID" type="email" v-model="email" :rules="emailRules"required></v-text-field>
                 <v-text-field label="Senha" type="password" v-model="password" :rules="passwordRules" required></v-text-field>
                 <router-link to="forgot" >Esqueceu sua senha?</router-link>
-                <v-btn type="submit" class="login_btn">Acessar</v-btn>
+                <v-btn type="submit" class="button button_primary login_btn">Acessar</v-btn>
               </v-form>
             </v-flex>
           </div>
@@ -44,7 +44,7 @@
         <v-card-text>Sua credêncial parace está incorreta. Verifique-a e tente efetuar login novamente. Caso não consega efetuar login entre em contato com o suporte.</v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn flat="flat" class="login_btn" @click.native="dialog = false">Ok</v-btn>
+          <v-btn flat="flat" class="button button_primary" @click.native="dialog = false">Ok</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

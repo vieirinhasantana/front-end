@@ -11,18 +11,23 @@ a{
     color: #9f9da3 !important;
     text-decoration: none;
 }
+button{
+    border-radius: 30px !important;
+    font-size: 12px;
+    font-weight: 100!important;
+}
 
 .primary--text{
     color: #922c8a !important;
 }
 
-.login_btn{
+.button_primary{
     background: #392c70 !important;
     color: #fff !important;
-    border-radius: 30px;
-    font-size: 12px;
+}
+
+.login_btn{
     float: right;
-    font-weight: 100;
 }
 
 .container{
@@ -36,7 +41,6 @@ a{
 .left_sign_in{
     margin-top: 250px;
 }
-
 
 .right_sign_in{
     margin: 0px 0px 0px 0px;
@@ -91,3 +95,27 @@ footer{
     text-align: right;
     margin-left: -50px;
 }
+
+.badge--overlap .badge__badge{
+    background-color:#922c88 !important;
+    height: 15px !important;
+    width: 15px !important;
+    font-size: 10px !important;
+    top: 8px !important;
+    right: 10px !important;
+}
+
+.button_navbar_unibank{
+    color: #9d9aaa !important;
+}
+
+.button_money_transfer {
+    font-weight: 400 !important;
+    padding: 0px 8px 0px 8px;
+}
+
+.unibank-navbar{
+    background-color: #fff !important;
+    border-bottom: #f8f8f8 1px solid;
+}
+

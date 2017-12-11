@@ -3,7 +3,7 @@ import { sign, statusToken } from './api.js'
 
 export function isLoggedIn () {
   return new Promise((resolve, reject) => {
-    var cookiesStatus = true
+    var cookiesStatus = false
     if (!cookies.isKey('UniBank-Token') || !cookies.isKey('UniBank-loggedIn')) {
       if (!cookiesStatus) {
         reject(cookiesStatus)

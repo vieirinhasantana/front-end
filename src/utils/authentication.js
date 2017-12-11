@@ -1,11 +1,13 @@
 import cookies from 'vue-cookies'
-import { sign } from './api.js'
+import { sign, statusToken } from './api.js'
 
 export function isLoggedIn () {
   if (!cookies.isKey('UniBank-Token') || !cookies.isKey('UniBank-loggedIn')) {
     return false
+  } else if (cookies.get('UniBank-Token') != null && cookies.get('UniBank-loggedIn') != null) {
+    statusToken
   } else {
-    return true
+    return false
   }
 }
 

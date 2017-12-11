@@ -2,13 +2,28 @@ import cookies from 'vue-cookies'
 import { sign, statusToken } from './api.js'
 
 export function isLoggedIn () {
-  if (!cookies.isKey('UniBank-Token') || !cookies.isKey('UniBank-loggedIn')) {
-    return false
-  } else if (cookies.get('UniBank-Token') != null && cookies.get('UniBank-loggedIn') != null) {
-    statusToken
-  } else {
-    return false
-  }
+  return new Promise((resolve, reject) => {
+    var cookiesStatus = true
+    if (!cookies.isKey('UniBank-Token') || !cookies.isKey('UniBank-loggedIn')) {
+      if (!cookiesStatus) {
+        reject(cookiesStatus)
+      }
+    } else if (cookies.get('UniBank-Token') !== null || cookies.get('UniBank-loggedIn') !== null) {
+      statusToken()
+      .then(result => {
+        resolve(result.data.body.StatusToken)
+      })
+      .catch(err => {
+        if (err) {
+          reject(err)
+        }
+      })
+    } else {
+      if (!cookiesStatus) {
+        reject(cookiesStatus)
+      }
+    }
+  })
 }
 
 export function LoggedIn (email, password) {
@@ -26,7 +41,7 @@ export function LoggedIn (email, password) {
 }
 
 export function logout () {
-  cookies.remove('token')
-  cookies.remove('email')
+  cookies.remove('UniBank-Token')
+  cookies.remove('UniBank-loggedIn')
   return true
 }

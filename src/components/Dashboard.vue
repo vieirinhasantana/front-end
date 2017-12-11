@@ -76,11 +76,17 @@ export default {
     navbar: NavBar
   },
   created: function () {
-    if (!isLoggedIn()) {
-      this.$router.replace({
-        path: '/sign-in'
-      })
-    }
+    isLoggedIn()
+    .then(result => {
+      console.log('Unibak-Ok')
+    })
+    .catch(err => {
+      if (err) {
+        this.$router.replace({
+          path: '/sign-in'
+        })
+      }
+    })
   }
 }
 </script>

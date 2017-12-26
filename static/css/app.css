@@ -47,7 +47,7 @@ button{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #392c70 url("/static/img/bg_sign_in_UniBank.png");
+    background: #392c70 url("/static/img/bg_sign_in.png");
 
     color: #fff !important;
 }
@@ -132,11 +132,6 @@ footer{
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,.05), 0 1px 0px 0 rgba(0,0,0,0);
 }
 
-.input-group--text-field input, .input-group--text-field textarea{
-    font-size: 12px;
+.table-list-bug{
+    margin-top: 40px;
 }
-
-span.unibank-username{
-
-}
-

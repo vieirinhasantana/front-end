@@ -14,7 +14,8 @@
     "axios": "^0.17.1",
     "vue": "^2.5.2",
     "vue-cookies": "^1.5.4",
-    "vue-material": "^1.0.0-beta-5",
+    "vue-material": "^1.0.0-beta-7",
+    "vue-moment": "^3.1.0",
     "vue-router": "^3.0.1",
     "vue-sweetalert": "^0.1.18",
     "vuetify": "^0.17.3"

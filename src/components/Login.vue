@@ -11,7 +11,7 @@
           <div class="left_sign_in">
             <v-flex xs8 offset-xs0 offset-md1 offset-lg2>
               <v-form v-model="valid" v-on:submit.prevent="onSubmit">
-                <v-text-field label="Email ID" type="email" v-model="email" :rules="emailRules"required></v-text-field>
+                <v-text-field label="Email ID" type="email" v-model="email" :rules="emailRules" required></v-text-field>
                 <v-text-field label="Senha" type="password" v-model="password" :rules="passwordRules" required></v-text-field>
                 <router-link to="forgot" >Esqueceu sua senha?</router-link>
                 <v-btn type="submit" class="button button_primary login_btn">Acessar</v-btn>
@@ -21,15 +21,15 @@
           <footer>
             <v-flex xs12 sm1 md3 offset-md1>
               <h4 class="title_UniBank_alert">Atenção!</h4>
-              <p class="text_UniBank">UniBank não exige a instalação de nenhum software adicional.<br>É aconselhável proteger de malware fingindo Trusteer Rapport.</p>
+              <p class="text_UniBank">WebPortal não exige a instalação de nenhum software adicional.<br>É aconselhável proteger de malware fingindo Trusteer Rapport.</p>
             </v-flex>
           </footer>
         </v-flex>
         <v-flex xs12 sm5 md8>
           <div class="right_sign_in">
             <div class="text_welcome">
-              <p class="text_big">Bem-vindo ao <b>UniBank</b></p>
-              <p class="text_small">Somos mais que um banco, somos o futuro.</p>
+              <p class="text_big">Bem-vindo ao <b>WebPortal</b></p>
+              <p class="text_small">Central atendimento ao usuário.</p>
             </div>
             <div class="finally">
               <p><div>© {{ new Date().getFullYear() }} - Todos os direitos reservados.</div></p>
@@ -74,8 +74,8 @@ export default {
       } else {
         LoggedIn(this.email, this.password)
         .then(result => {
-          this.$cookies.set('UniBank-loggedIn', btoa(this.email))
-          this.$cookies.set('UniBank-Token', result.data.body.token)
+          this.$cookies.set('loggedIn', btoa(this.email))
+          this.$cookies.set('token', result.data.TokenAccess)
           this.$router.push('dashboard')
         })
         .catch(err => {

@@ -7,6 +7,7 @@ import VueCookies from 'vue-cookies'
 import VueSweetAlert from 'vue-sweetalert'
 import Vuetify from 'vuetify'
 
+Vue.use(require('vue-moment'))
 Vue.use(VueCookies)
 Vue.use(VueSweetAlert)
 Vue.use(Vuetify)
